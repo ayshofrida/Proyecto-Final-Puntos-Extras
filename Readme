@@ -1,0 +1,20 @@
+Este programa tiene 2 puntos adicionales los cuales son necesarios para obtener cotizaciones hasta que el usuario detenga el programa (en bucle) y recargos adicionales. Tomando en cuenta  el sueldo del usuario y la cantidad de propiedades que posee.
+
+El ciclo de cotización podría replantearse de esta manera:
+
+function solicitarCotizacion() {
+    let continuar = prompt("¿Desea realizar una cotización? Ingrese 'Salir' para finalizar o 'Sí' para continuar.");
+    switch (continuar.toUpperCase()) {
+        case 'SALIR':
+            alert("Gracias por utilizar el sistema de cotizaciones.");
+            return false;
+        case 'SI':
+            calcularCotizacion();
+            return true;
+        default:
+            alert("Por favor ingrese 'Sí' para continuar o 'Salir' para finalizar.");
+            return true;
+    }
+}
+
+while (solicitarCotizacion()) {}
